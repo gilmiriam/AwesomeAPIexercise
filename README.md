@@ -8,6 +8,9 @@ to do that we need to satisfy 3 possible scenarios:
 - Delete users
 
 The considerations for the exercises are:
+- You can use the database service of docker-compose as a manual test,
+but you need to do the automated tests 
+
 - The application have to be well tested in order to cover all
 edge cases and not only the happy path
 
