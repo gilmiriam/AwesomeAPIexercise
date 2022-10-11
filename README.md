@@ -11,6 +11,8 @@ The considerations for the exercises are:
 - The application have to be well tested in order to cover all
 edge cases and not only the happy path
 
-- Well constructed architecture
-
 - We need something simple but scalable
+
+- Well constructed architecture, you can use the next image as guide
+
+![img.png](docs/clean_architecture.png)
