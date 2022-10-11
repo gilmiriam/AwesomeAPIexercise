@@ -5,5 +5,14 @@ services:
     volumes:
       - .:/go/src/gitlab.services/crawling/ads-api
     ports:
-      - "8080:8080"
+      - "8181:8181"
     command: go run main.go
+
+  postgres:
+    image: postgres:14.3
+    ports:
+      - "5432"
+    environment:
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "root"
+      POSTGRES_DB: "api_users"
