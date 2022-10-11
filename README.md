@@ -15,4 +15,4 @@ edge cases and not only the happy path
 
 - Well constructed architecture, you can use the next image as guide
 
-![img.png](docs/clean_architecture.png)
+<img src="docs/clean_architecture.png" alt="drawing" width="500"/>
