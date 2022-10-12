@@ -39,3 +39,7 @@ edge cases and not only the happy path
 You can use the next image as guide
 
 <img src="docs/clean_architecture.png" alt="drawing" width="500"/>
+
+### Run application
+You can build and run the application with the Makefile provided, that have the commands
+for build, run and test
