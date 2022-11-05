@@ -9,7 +9,7 @@ import (
 
 func main() {
 	routerParent := mux.NewRouter().StrictSlash(true)
-	cors := cors.New(cors.Options{
+	corsMiddleware := cors.New(cors.Options{
 		AllowedOrigins: []string{"*"},
 		AllowedMethods: []string{
 			http.MethodPost,
@@ -20,8 +20,10 @@ func main() {
 	})
 	routerParent.HandleFunc("/ping", controllers.Ping).Methods("GET")
 	routerParent.HandleFunc("/login", controllers.Login).Methods("POST")
+	//routerParent.HandleFunc("/user", controllers.Login).Methods("GET")
+	//routerParent.HandleFunc("/refresh", controllers.Login).Methods("POST")
 
-	handler := cors.Handler(routerParent)
+	handler := corsMiddleware.Handler(routerParent)
 
 	http.ListenAndServe(":8080", handler)
 }

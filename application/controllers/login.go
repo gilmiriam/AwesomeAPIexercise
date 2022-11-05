@@ -1,12 +1,23 @@
 package controllers
 
 import (
+	"awesomeProject1/application"
 	"encoding/json"
 	"net/http"
 )
 
+type ResponseToken struct {
+	Message     string
+	AccessToken string
+}
+
 func Login(w http.ResponseWriter, r *http.Request) {
+	signedToken := application.GenerateToken()
 	w.WriteHeader(http.StatusOK)
-	body, _ := json.Marshal("{token: test123}")
+	response := ResponseToken{
+		Message:     "loginSuccesful",
+		AccessToken: signedToken,
+	}
+	body, _ := json.Marshal(&response)
 	w.Write(body)
 }
