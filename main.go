@@ -20,6 +20,7 @@ func main() {
 	})
 	routerParent.HandleFunc("/ping", controllers.Ping).Methods("GET")
 	routerParent.HandleFunc("/login", controllers.Login).Methods("POST")
+	routerParent.HandleFunc("/uploadFile", controllers.UploadFile).Methods("POST")
 	//routerParent.HandleFunc("/user", controllers.Login).Methods("GET")
 	//routerParent.HandleFunc("/refresh", controllers.Login).Methods("POST")
 
