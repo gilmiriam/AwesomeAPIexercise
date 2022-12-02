@@ -15,6 +15,10 @@ jobs:
       pages: write
       id-token: write
     
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -32,8 +36,9 @@ jobs:
     - name: Publish build
       uses: actions/upload-artifact@v3
       with:
-        name: AwesomeAPIexercise
+        name: github-pages
         path: ${{ github.workspace }}
 
     - name: Run
+      id: deployment
       uses: actions/deploy-pages@v1
