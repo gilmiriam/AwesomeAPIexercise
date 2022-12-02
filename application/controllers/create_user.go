@@ -6,8 +6,7 @@ import (
 )
 
 type UserCredentials struct {
-	Name     string `json:"name"`
-	LastName string `json:"lastName"`
+	UserName string `json:"UserName"`
 	Password string `json:"password"`
 	Email    string `json:"email"`
 }
