@@ -5,9 +5,9 @@ name: Go
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "login_feature" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "login_feature" ]
     
 jobs:
   build:
